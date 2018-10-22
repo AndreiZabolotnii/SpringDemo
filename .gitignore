@@ -1,0 +1,14 @@
+
+\.idea/compiler\.xml
+
+\.idea/encodings\.xml
+
+\.idea/inspectionProfiles/
+
+target/classes/components/
+
+target/classes/
+
+*.iml
+
+\.idea/
