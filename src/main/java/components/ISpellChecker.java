@@ -1,9 +1,11 @@
 package components;
 
+import java.util.List;
+
 public interface ISpellChecker {
 
-    void setDemoText(String text);
-    String getDemoText();
+    void setLs(List ls);
+    List getLs();
     void checkSpelling();
 
 }

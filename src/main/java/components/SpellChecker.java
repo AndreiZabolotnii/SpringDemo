@@ -1,19 +1,32 @@
 package components;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class SpellChecker implements ISpellChecker{
-	String demoText;
+	List ls = new ArrayList();
 
 	@Override
-	public void setDemoText(String text){
-		this.demoText = text;
+	public void setLs(List ls){
+		this.ls = ls;
 	}
 	@Override
-	public String getDemoText(){
-		return demoText;
+	public List getLs(){
+		return ls;
 	}
 	@Override
 	public void checkSpelling(){
-		System.out.println("Inside checkSpelling." + demoText);
+        for (Object l : ls) {
+            System.out.println("");
+            System.out.println("");
+            System.out.println("Inside checkSpelling." + l.toString());
+            System.out.println("");
+            System.out.println("");
+        }
 	}
-
 }

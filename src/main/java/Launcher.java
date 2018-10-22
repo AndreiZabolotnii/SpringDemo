@@ -12,7 +12,6 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import javax.xml.soap.Text;
-
 @PropertySource("application.properties")
 public class Launcher {
 
@@ -22,7 +21,7 @@ public class Launcher {
         TextEditor txtEditor = context.getBean(TextEditor.class);
 
         txtEditor.spellCheck();
-
+        //System.out.println(txtEditor.getList());
         context.close();
     }
 
