@@ -1,21 +1,19 @@
 package components;
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-
 @Component
 public class CarteObjectives {
 
     @Autowired
-    @Qualifier("panda")
+    @Qualifier("objectifPanda")
     private List<IObjectives> objP;
 
     @Autowired
-    @Qualifier("gardener")
+    @Qualifier("objectifGardener")
     private List<IObjectives> objG;
 
     public List<IObjectives> getObjP() {

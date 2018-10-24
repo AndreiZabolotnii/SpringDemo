@@ -9,6 +9,6 @@ public class Launcher {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ObjectivesConfig.class);
         CarteObjectives allObjectives = context.getBean(CarteObjectives.class);
         allObjectives.verifyObjAccomplishment();
-        context.close();
+        //context.close();
     }
 }

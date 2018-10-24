@@ -3,8 +3,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +11,7 @@ import java.util.List;
 @ComponentScan(value = "components")
 public class ObjectivesConfig {
     @Bean
-    @Qualifier("panda")
+    @Qualifier("objectifPanda")
     public List<IObjectives> getObjectivesPanda(){
         IObjectives spl1 = new ObjectifPanda(2,"green",3);
         IObjectives spl2 = new ObjectifPanda(2,"green",3);
@@ -28,7 +26,7 @@ public class ObjectivesConfig {
     }
 
     @Bean
-    @Qualifier("gardener")
+    @Qualifier("objectifGardener")
     public List<IObjectives> getObjectivesGarneder(){
         IObjectives spl1 = new ObjectifGardener(2,"green",3);
         IObjectives spl2 = new ObjectifGardener(2,"green",3);
